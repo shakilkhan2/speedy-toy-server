@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "picture": "https://m.media-amazon.com/images/I/81V7Z6v9MoL._AC_SX569_.jpg",
+    "name": "Speed Racer",
+    "price": 19.99,
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "picture": "https://m.media-amazon.com/images/I/81V7Z6v9MoL._AC_SX569_.jpg",
+    "name": "Turbo Lightning",
+    "price": 24.99,
+    "rating": 4.2
+  },
+  {
+    "id": 3,
+    "picture": "https://m.media-amazon.com/images/I/61YZAgR-XTL._AC_SX569_.jpg",
+    "name": "Off-Road King",
+    "price": 29.99,
+    "rating": 4.8
+  },
+  {
+    "id": 4,
+    "picture": "https://m.media-amazon.com/images/I/61YZAgR-XTL._AC_SX569_.jpg",
+    "name": "City Cruiser",
+    "price": 17.99,
+    "rating": 4.0
+  },
+  {
+    "id": 5,
+    "picture": "https://m.media-amazon.com/images/I/81V7Z6v9MoL._AC_SX569_.jpg",
+    "name": "Super Speedster",
+    "price": 32.99,
+    "rating": 4.7
+  },
+  {
+    "id": 6,
+    "picture": "https://m.media-amazon.com/images/I/61YZAgR-XTL._AC_SX569_.jpg",
+    "name": "Rally Racer",
+    "price": 21.99,
+    "rating": 4.3
+  }
+]
