@@ -41,22 +41,36 @@ async function run() {
       if (req.query?.email) {
         query = { sellerEmail: req.query.email };
       }
-
+      if (req.query.limit) {
+        const cursor = addedToys.find(query).limit(parseFloat(req.query.limit));
+        const result = await cursor.toArray();
+        return res.send(result);
+      }
       const cursor = addedToys.find(query);
       const result = await cursor.toArray();
       res.send(result);
     });
 
-    // 
-    app.get("/addedToys/:id", async(req, res) => {
+    //
+    app.get("/addedToys/:id", async (req, res) => {
       const id = req.params.id;
-      const query ={_id: new ObjectId(id)};
-      const options ={
-        projections : {productName: 1, photo: 1, seller: 1, sellerEmail: 1, category: 1, price: 1, rating: 1, quantity: 1, description: 1 }
-      }
+      const query = { _id: new ObjectId(id) };
+      const options = {
+        projections: {
+          productName: 1,
+          photo: 1,
+          seller: 1,
+          sellerEmail: 1,
+          category: 1,
+          price: 1,
+          rating: 1,
+          quantity: 1,
+          description: 1,
+        },
+      };
       const result = await addedToys.findOne(query, options);
       res.send(result);
-    })
+    });
 
     app.post("/addedToys", async (req, res) => {
       const addedToy = req.body;
@@ -67,11 +81,10 @@ async function run() {
 
     app.delete("/addedToys/:id", async (req, res) => {
       const id = req.params.id;
-      const query = {_id: new ObjectId(id)};
+      const query = { _id: new ObjectId(id) };
       const result = await addedToys.deleteOne(query);
       res.send(result);
-    })
-
+    });
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
