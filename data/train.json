@@ -1,8 +1,9 @@
 [
   {
-    "id": 1,
+    "id": 17,
     "picture": "https://m.media-amazon.com/images/I/719+BP+gpsL._AC_SX569_.jpg",
     "name": "Lionel The Polar Express Model Train Set",
+    "category": "train",
     "price": 19.99,
     "rating": 4.5,
     "seller": "Rafsan Alvi",
@@ -11,9 +12,10 @@
     "about": "Speed through thrilling adventures with this realistic toy car. Built for durability and endless fun, it's perfect for racing enthusiasts and imaginative play."
   },
   {
-    "id": 2,
+    "id": 18,
     "picture": "https://m.media-amazon.com/images/I/71WAXTFl-gL._AC_SX569_.jpg",
     "name": "Lionel Disney's Frozen Train Set",
+    "category": "train",
     "price": 24.99,
     "rating": 4.2,
     "seller": "Rafsan Alvi",
@@ -22,9 +24,10 @@
     "about": "Speed through thrilling adventures with this realistic toy car. Built for durability and endless fun, it's perfect for racing enthusiasts and imaginative play."
   },
   {
-    "id": 3,
+    "id": 19,
     "picture": "https://m.media-amazon.com/images/I/719+BP+gpsL._AC_SX569_.jpg",
     "name": "Lionel The Polar Express Model Train Set",
+    "category": "train",
     "price": 29.99,
     "rating": 4.8,
     "seller": "Rafsan Alvi",
@@ -33,9 +36,10 @@
     "about": "Speed through thrilling adventures with this realistic toy car. Built for durability and endless fun, it's perfect for racing enthusiasts and imaginative play."
   },
   {
-    "id": 4,
+    "id": 20,
     "picture": "https://m.media-amazon.com/images/I/71WAXTFl-gL._AC_SX569_.jpg",
     "name": "Lionel Disney's Frozen Train Set",
+    "category": "train",
     "price": 17.99,
     "rating": 4.0,
     "seller": "Rafsan Alvi",
@@ -44,9 +48,10 @@
     "about": "Speed through thrilling adventures with this realistic toy car. Built for durability and endless fun, it's perfect for racing enthusiasts and imaginative play."
   },
   {
-    "id": 5,
+    "id": 21,
     "picture": "https://m.media-amazon.com/images/I/719+BP+gpsL._AC_SX569_.jpg",
     "name": "Lionel The Polar Express Model Train Set",
+    "category": "train",
     "price": 32.99,
     "rating": 4.7,
     "seller": "Rafsan Alvi",
@@ -55,9 +60,10 @@
     "about": "Speed through thrilling adventures with this realistic toy car. Built for durability and endless fun, it's perfect for racing enthusiasts and imaginative play."
   },
   {
-    "id": 6,
+    "id": 22,
     "picture": "https://m.media-amazon.com/images/I/71WAXTFl-gL._AC_SX569_.jpg",
     "name": "Lionel Disney's Frozen Train Set",
+    "category": "train",
     "price": 21.99,
     "rating": 4.3,
     "seller": "Rafsan Alvi",
