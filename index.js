@@ -41,14 +41,20 @@ async function run() {
       if (req.query?.email) {
         query = { sellerEmail: req.query.email };
       }
-      if (req.query.limit) {
-        const cursor = addedToys.find(query).limit(parseFloat(req.query.limit));
-        const result = await cursor.toArray();
-        return res.send(result);
+      if (req.query.search) {
+        query = {
+          ...query,
+          productName: { $regex: req.query.search, $options: "i" },
+        };
       }
-      const cursor = addedToys.find(query);
+      const cursor = addedToys
+        .find(query)
+        .limit(parseFloat(req.query.limit || 20))
+        .sort({
+          price: req.query.sort === "acc" ? 1 : -1,
+        });
       const result = await cursor.toArray();
-      res.send(result);
+      return res.send(result);
     });
 
     //
@@ -71,7 +77,7 @@ async function run() {
       const result = await addedToys.findOne(query, options);
       res.send(result);
     });
-
+    // add
     app.post("/addedToys", async (req, res) => {
       const addedToy = req.body;
       console.log(addedToy);
@@ -79,6 +85,18 @@ async function run() {
       res.send(result);
     });
 
+    // update
+    app.patch("/update-toy/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const updatedData = { ...req.body };
+      const result = await addedToys.updateOne(query, {
+        $set: updatedData,
+      });
+      res.send(result);
+    });
+
+    // delete
     app.delete("/addedToys/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
